@@ -7,21 +7,24 @@ class AppUpdatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildHeaderText(),
-              const VerticlSpacing(height: 20),
-              _buildDescriptionText(),
-              const VerticlSpacing(height: 25),
-              _buildImage(),
-              const VerticlSpacing(height: 25),
-              _buildUpdateButton(),
-              _buildSkipTextButton(),
-            ],
+    return WillPopScope(
+      onWillPop: () => Future.value(false),
+      child: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _buildHeaderText(),
+                const VerticlSpacing(height: 20),
+                _buildDescriptionText(),
+                const VerticlSpacing(height: 25),
+                _buildImage(),
+                const VerticlSpacing(height: 25),
+                _buildUpdateButton(),
+                _buildSkipTextButton(),
+              ],
+            ),
           ),
         ),
       ),
