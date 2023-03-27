@@ -9,5 +9,8 @@ class AppRouter extends $AppRouter {
       path: '/',
       page: MyHomeRoute.page,
     ),
+    AutoRoute(
+      page: AppUpdateRoute.page,
+    ),
   ];
 }
